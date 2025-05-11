@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Isabelle Devaux | Generative AI for Work &amp; Research</title>
+  <style>
+    :root {
+      --primary: #00793f; /* accent green */
+      --secondary: #46a358;
+      --light: #f5f5f7;
+      --dark: #222;
+      --font: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--dark);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    /* ===== Top Navigation  ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid #e7e7e7;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+    }
+
+    .nav-left ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-left a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-left a:hover { color: var(--primary); }
+
+    .brand {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--dark);
+      text-transform: uppercase;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .cta-btn {
+      background: var(--primary);
+      border: none;
+      color: #fff;
+      padding: 0.45rem 1rem;
+      border-radius: 2px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .cta-btn:hover { background: #005b31; }
+
+    .icon {
+      font-size: 1.1rem;
+      display: inline-block;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative;
+      background: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=60") center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .hero h1 {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 2.75rem;
+      margin: 0 0 0.75rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      font-family: "Georgia", "Times New Roman", serif;
+      color: var(--primary);
+      font-size: 1.75rem;
+      margin-top: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--secondary);
+      color: #fff;
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+      font-size: 0.75rem;
+      margin: 0 0.25rem 0.25rem 0;
+    }
+
+    /* Timeline */
+    .timeline {
+      border-left: 3px solid var(--primary);
+      margin-left: 1rem;
+      padding-left: 1rem;
+    }
+
+    .timeline-item { margin-bottom: 1.15rem; }
+
+    /* Submissions grid */
+    .submissions-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .submission-card {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 1rem 1rem 1.75rem;
+      text-align: center;
+    }
+
+    .submission-card h3 { margin: 0 0 0.35rem; font-size: 1.15rem; }
+
+    .button {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.45rem 0.9rem;
+      border-radius: 2px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .button:hover { background: #005b31; }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+
+    /* Smooth scrolling */
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar matching layout -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#course">Course</a></li>
+          <li><a href="#submissions">Submissions</a></li>
+        </ul>
+      </div>
+      <div class="brand">ID / 25</div>
+      <div class="nav-right">
+        <button class="cta-btn" onclick="window.open('https://www.linkedin.com/in/isabelledevaux/', '_blank')">Connect</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p style="font-style: italic; font-size:1.25rem; margin-bottom:0.25rem;">Discover my</p>
+      <h1>Generative&nbsp;AI Portfolio</h1>
+      <p>Applying large‑language models to advance public‑health research &amp; practice.</p>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a public health professional and epidemiologist (MPH, PhD) with more than
+      25&nbsp;years of experience helping organisations such as the <strong>World Health Organization</strong>,
+      <strong>Food &amp; Agriculture Organization</strong>, <strong>European Centre&nbsp;for Disease Prevention &amp; Control</strong>
+      and <strong>Médecins&nbsp;Sans&nbsp;Frontières</strong> prepare for and respond to health emergencies around the globe.
+    </p>
+    <p>
+      My expertise spans
+      <span class="badge">health data</span>
+      <span class="badge">surveillance‑systems</span>
+      <span class="badge">outbreak response</span>
+      <span class="badge">One Health</span>
+      and
+      <span class="badge">capacity&nbsp;building</span>.
+      I’m passionate about using <em>generative AI</em> and open‑source tools to transform how we analyse
+      data and communicate insights for the public good.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-item"><strong>2024 – 2025 ·</strong> Consultant, FAO – Workforce&nbsp;development strategy (Animal&nbsp;Health Division)</div>
+      <div class="timeline-item"><strong>2023 – 2024 ·</strong> Project Manager, WHO Geneva – SCORE Health‑Data Package</div>
+      <div class="timeline-item"><strong>2019 – 2023 ·</strong> Health Operations &amp; Technical Officer, WHO Europe &amp; Turkey</div>
+      <div class="timeline-item"><strong>2007 – 2014 ·</strong> Senior Expert, ECDC – Surveillance&nbsp;&amp;&nbsp;response support</div>
+    </div>
+  </section>
+
+  <!-- About the Course -->
+  <section id="course">
+    <h2>About “Generative AI for Work &amp; Research”</h2>
+    <p>
+      This hands‑on course is part of <strong>The&nbsp;GRAPH Network’s</strong> mission to make data science &amp; AI
+      accessible for health and life‑science professionals. Over eight weeks we explore:
+    </p>
+    <ul>
+      <li>Prompt‑engineering and workflow design for ChatGPT &amp; open‑source LLMs</li>
+      <li>Ethics, bias and governance considerations for AI in public health</li>
+      <li>Integrating AI tools into research pipelines and organisational processes</li>
+      <li>Building lightweight AI‑powered prototypes with Python &amp; R</li>
+    </ul>
+    <p>
+      The programme is <em>beginner‑friendly</em>, <em>career‑focused</em> and supported by universities, NGOs and
+      industry partners to keep tuition affordable.
+    </p>
+    <a class="button" href="https://thegraphcourses.org" target="_blank" rel="noopener">Learn more about The&nbsp;GRAPH Courses</a>
+  </section>
+
+  <!-- Weekly Submissions -->
+  <section id="submissions">
+    <h2>My Weekly Submissions</h2>
+    <p>Below you’ll find links to the practical assignments I complete each week. Check back for new updates!</p>
+
+    <div class="submissions-grid">
+      <div class="submission-card">
+        <h3>Week&nbsp;1</h3>
+        <p>Prompt‑Engineering Basics</p>
+        <a href="#" class="button">View&nbsp;→</a>
+      </div>
+      <div class="submission-card">
+        <h3>Week&nbsp;2</h3>
+        <p>Knowledge‑Management Bots</p>
+        <a href="#" class="button">View&nbsp;→</a>
+      </div>
+      <div class="submission-card">
+        <h3>Week&nbsp;3</h3>
+        <p>Data Cleaning with LLMs</p>
+        <a href="#" class="button">View&nbsp;→</a>
+      </div>
+      <!-- Additional weeks can be added here -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dr. Isabelle Devaux • All rights reserved</p>
+  </footer>
+</body>
+</html>
