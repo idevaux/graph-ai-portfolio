@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dr. Isabelle Devaux | Generative AI Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio for the Generative AI for Work & Research Bootcamp 2025 Q2 – Dr Isabelle Devaux, PhD MPH.">
+  <style>
+    :root{
+      --primary:#4f46e5; /* brand blue */
+      --accent:#10b981; /* call‑to‑action green */
+      --light:#f9fafb;
+      --dark:#111827;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height:1.6;
+      color:var(--dark);
+      background:var(--light);
+    }
+
+    /* ---------- NAV BAR (James‑Consulting style) ---------- */
+    header{
+      width:100%;
+      position:fixed;top:0;left:0;z-index:1000;
+      background:rgba(79,70,229,0.9); /* translucent primary */
+      color:#fff;
+      backdrop-filter:saturate(180%) blur(10px);
+    }
+    .nav-wrapper{
+      max-width:1200px; margin:auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0.75rem 1rem;
+      flex-wrap:wrap;gap:1rem;
+    }
+    .brand{display:flex;align-items:center;gap:0.75rem;white-space:nowrap}
+    .avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid #fff;flex-shrink:0;}
+    .brand h1{font-size:1.35rem;font-weight:700;line-height:1.2;color:#fff;margin:0}
+
+    nav ul{display:flex;align-items:center;gap:1rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
+    nav a{color:#fff;text-decoration:none;font-weight:500;transition:opacity .2s}
+    nav a:hover{opacity:.8}
+    .login-btn{background:#fff;color:var(--primary);padding:0.4rem 0.9rem;border-radius:9999px;font-weight:600}
+
+    /* ---------- HERO SECTION (Wix consulting layout) ---------- */
+    .hero{
+      height:70vh;
+      background:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      position:relative;
+      display:flex;align-items:center;justify-content:center;text-align:center;
+      color:#fff;
+      margin-top:70px; /* offset fixed header */
+    }
+    .hero::before{
+      content:"";position:absolute;inset:0;
+      background:rgba(17,24,39,0.55);
+    }
+    .hero-inner{position:relative;max-width:800px;padding:0 1rem}
+    .hero h2{font-size:2.25rem;font-weight:700;margin-bottom:0.75rem}
+    .hero p{font-size:1.125rem;margin-bottom:1.5rem}
+    .cta-btn{background:var(--accent);color:#fff;border:none;padding:0.75rem 1.5rem;font-size:1rem;border-radius:4px;font-weight:600;cursor:pointer}
+    .cta-btn:hover{opacity:.9}
+
+    /* ---------- GENERIC SECTION STYLING ---------- */
+    main section{padding:4rem 1rem;max-width:960px;margin:auto}
+    section h2{color:var(--primary);font-size:1.6rem;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px}
+    ul{list-style:none;padding-left:0}
+    li.card{background:#fff;border:1px solid #e5e7eb;border-radius:.5rem;padding:1rem 1.25rem;margin-bottom:.75rem;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+    details summary{cursor:pointer;font-weight:600;margin-bottom:.5rem}
+    .grid-2{display:grid;gap:1.25rem}
+    @media(min-width:640px){.grid-2{grid-template-columns:1fr 1fr}}
+
+    /* ---------- FOOTER ---------- */
+    footer{text-align:center;padding:2rem 1rem;font-size:.875rem;color:#6b7280;background:#fff}
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <header>
+    <div class="nav-wrapper">
+      <div class="brand">
+        <img src="https://raw.githubusercontent.com/idevaux/graph-ai-portfolio/60aa6595929bd4150ae8b673559b17b1226fb3fb/PhotoID.jpg" alt="Dr. Isabelle Devaux" class="avatar">
+        <h1>Dr Isabelle Devaux</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#plans">Pricing</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#login" class="login-btn">Log In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Generative AI Portfolio</h2>
+      <p>Harnessing artificial intelligence to advance public‑health research &amp; productivity.</p>
+      <a href="#projects" class="cta-btn">Explore Projects</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about-me">
+      <h2>About</h2>
+      <p><strong>Public‑health professional &amp; epidemiologist</strong> (<abbr title="Master of Public Health">MPH</abbr>, PhD) with 25+ years leading global disease‑surveillance and emergency‑response programmes for WHO, FAO, Médecins Sans Frontières, ECDC and CDC. I specialise in turning complex health data into actionable insights for crisis management and long‑term system strengthening.</p>
+      <div class="grid-2">
+        <ul>
+          <li class="card">WHO Slovakia – Ukraine Refugee Response (Health Ops Manager, 2022‑23)</li>
+          <li class="card">WHO Geneva – SCORE Health‑Data Project (2023‑24)</li>
+          <li class="card">ECDC – Senior Expert Surveillance (2007‑14)</li>
+          <li class="card">WHO Turkey – Health‑Security Project (2019‑21)</li>
+          <li class="card">FAO – One‑Health Workforce Strategy (2024‑25)</li>
+        </ul>
+        <ul>
+          <li class="card">Tools: R, STATA, Epi‑Info, ArcGIS, Go.Data</li>
+          <li class="card">Methods: outbreak investigation, EWARS, GIS risk mapping</li>
+          <li class="card">Languages: French (n) • English (fluent) • Spanish &amp; German (working)</li>
+          <li class="card">Publications: 20+ peer‑reviewed (e.g., BMC Med 2024)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS / WEEKLY SUBMISSIONS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>My weekly course submissions:</p>
+      <ul>
+        <li class="card"><em>Week 1 – Portfolio Website (this page)</em></li>
+        <li class="card"><em>Week 2 – Prompt Engineering for Rapid Literature Reviews</em></li>
+        <li class="card"><em>Week 3 – Data Wrangling &amp; Visualisation Dashboard</em></li>
+        <li class="card"><em>Week 4 – Custom Domain Chatbot Prototype</em></li>
+        <li class="card"><em>Week 5 – 24/7 Automated Workflow (Health‑Alert Digest)</em></li>
+        <li class="card"><em>Week 6 – AI‑generated Infographics &amp; Video Explainer</em></li>
+        <li class="card"><em>Week 7 – Integrating AI Tools into Field Epidemiology Kits</em></li>
+        <li class="card"><em>Week 8 – Capstone: AI‑enhanced Outbreak‑Response Playbook</em></li>
+      </ul>
+    </section>
+
+    <!-- SERVICES / ABOUT THE COURSE -->
+    <section id="services">
+      <h2>Services</h2>
+      <p><strong>Generative AI for Work &amp; Research Productivity Bootcamp 2025 Q2</strong> – an 8‑week programme that equips professionals to automate data analysis, content creation and knowledge management using <em>no‑code</em> AI.</p>
+      <ul>
+        <li>Automate document, spreadsheet &amp; data workflows</li>
+        <li>Conduct AI‑assisted literature reviews</li>
+        <li>Develop custom chatbots &amp; knowledge bases</li>
+        <li>Create professional visuals, presentations &amp; websites</li>
+        <li>Deliver a real‑world AI capstone project</li>
+      </ul>
+    </section>
+
+    <!-- PRICING -->
+    <section id="plans">
+      <h2>Pricing</h2>
+      <p><strong>$250 per month</strong> for 2 months • 1‑month refund policy. Fees support instructors and student aid.</p>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools">
+      <h2>Tools</h2>
+      <p>Curated AI tools &amp; workflow templates coming soon.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>For collaboration or questions, reach out via LinkedIn or GitHub.</p>
+    </section>
+
+    <!-- HIDDEN LOGIN -->
+    <section id="login" style="display:none"></section>
+  </main>
+
+  <footer>
+    © 2025 – Portfolio by Dr Isabelle Devaux. All rights reserved.
+  </footer>
+</body>
+</html>
